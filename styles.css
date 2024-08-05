@@ -19,7 +19,6 @@ body{
 }
 .nav-right{
     justify-content: space-between;
-    
     padding-right: 0px;
     margin-left: 0px;
     margin-right: 0px;
@@ -36,20 +35,17 @@ a{
     text-decoration-line: none;
     color:aliceblue;
 }
-.homepage{
+.homepage {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 100px;
+    /* flex-wrap: wrap; To handle small screens */
 }
-.homepage-left{
-    width:50%;
-    margin:10px;
-    padding-top:0px;
-}
-.icon{
-    width:250px;
-    height:250px;
+
+.icon {
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
 }
 hr{
@@ -77,17 +73,18 @@ hr{
     padding-left: 10px;
     padding-bottom: 5px;
 }
-.skills1{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.skills{
+    /* display: flex; */
+    /* justify-content: space-between;*/
+    align-items: start; 
     margin-bottom: 40px;
 }
+/*
 .skills2{
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
+} */
 #css,#python,#oops,#js{
     width:150px;
     height: 150px;
@@ -111,9 +108,6 @@ h3{
     justify-content: center;
 
 }
-.projects{
-    
-}
 .insta,.gmail{
     width:50px;
     height:50px;
@@ -132,51 +126,7 @@ h3{
     padding-right: 30px;
     
 }
- @import url('https://fonts.googleapis.com/css?family=Roboto:300');
-.class {
-  display:inline-block;
-  overflow:hidden;
-  white-space:nowrap;
-}
 
-.class:first-of-type {    /* For increasing performance 
-                       ID/Class should've been used. 
-                       For a small demo 
-                       it's okaish for now 
-  animation: showup 7s infinite;*/
-}
-
-.class:last-of-type span{
-  width:0px;
-  animation: reveal 7s infinite;
-}
-
-.class:last-of-type span {
-  margin-left:auto;
-  animation: slidein 7s infinite;
-}
-
-@keyframes showup {
-    0% {opacity:0;}
-    20% {opacity:1;}
-    80% {opacity:1;}
-    100% {opacity:0;}
-}
-
-@keyframes slidein {
-    0% { margin-left:-800px; }
-    20% { margin-left:-800px; }
-    35% { margin-left:0px; }
-    100% { margin-left:0px; }
-}
-
-@keyframes reveal {
-    0% {opacity:0;width:0px;}
-    20% {opacity:1;width:0px;}
-    30% {width:355px;}
-    80% {opacity:1;}
-    100% {opacity:0;width:700px;}
-} 
 .cert{
     display: flex;
     justify-content: space-evenly;
@@ -195,8 +145,38 @@ h3{
 .cod{
     color:black;
 }
-  
- 
-  
- 
-  
+.skill-card {
+    border: 1px solid #131212;
+    border-radius: 10px;
+    width:27%;
+    float: left;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.skill-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.connect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.proj_link{
+    color: black;
+}
+.proj_link a:hover{
+    color:red;
+}
+li{
+    padding: 5px;
+}
